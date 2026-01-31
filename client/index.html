@@ -2,16 +2,23 @@
 <html>
 <head>
   <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Dhumbal Online</title>
   <link rel="stylesheet" href="style.css" />
 </head>
 <body>
   <div class="wrap">
-    <h1>Dhumbal Online</h1>
+    <header class="top">
+      <div>
+        <h1>Dhumbal Online</h1>
+        <div class="sub">Drop (discard or meld) → Pick 1 → Turn ends. Show only at ≤ 5.</div>
+      </div>
+    </header>
 
     <div class="row">
       <input id="name" placeholder="Your name" />
       <button id="create">Create Room</button>
+
       <input id="room" placeholder="Room Code" />
       <button id="join">Join</button>
       <button id="start">Start Game</button>
@@ -21,33 +28,42 @@
     <div id="error"></div>
 
     <div class="grid">
-      <div class="panel">
+      <section class="panel">
         <h2>Players</h2>
         <div id="players"></div>
-        <h2>Log</h2>
+
+        <h2 class="mt">Log</h2>
         <div id="log"></div>
-      </div>
+      </section>
 
-      <div class="panel">
+      <section class="panel">
         <h2>Floor</h2>
-        <div id="floor"></div>
         <div class="hint">
-          Floor rule: you can grab any floor card <b>except Joker</b>. To grab, select 1 card from your hand (the “payment”), then click a floor card.
+          After you drop, you may pick exactly 1 card from the deck or floor.
+          <b>You cannot pick Joker from the floor.</b>
         </div>
-      </div>
+        <div id="floor"></div>
+      </section>
 
-      <div class="panel">
+      <section class="panel">
         <h2>Your Hand</h2>
         <div id="hand"></div>
+
         <div class="actions">
-          <button id="drop">Drop Selected</button>
-          <button id="draw">Draw 1</button>
+          <button id="drop">Drop Meld</button>
+          <button id="discard">Discard 1</button>
+          <button id="pick">Pick 1 (Deck)</button>
           <button id="show">Show</button>
         </div>
+
+        <div class="hint" id="totalHint"></div>
         <div class="hint">
-          Rule enforced: you can only draw when you have <b>no valid melds</b> left in your hand (drop as many as you can, then draw one).
+          Tip: Tap cards to select.  
+          - <b>Discard 1</b> needs exactly 1 selected  
+          - <b>Drop Meld</b> needs 2+ selected  
+          - <b>Pick 1</b> only works after you dropped something  
         </div>
-      </div>
+      </section>
     </div>
   </div>
 
