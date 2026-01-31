@@ -1,0 +1,18 @@
+body { font-family: system-ui, sans-serif; background:#0b0f14; color:#e9eef5; }
+.wrap { max-width: 1100px; margin: 20px auto; padding: 12px; }
+.row { display:flex; gap:8px; flex-wrap:wrap; align-items:center; }
+input { padding:10px; border-radius:10px; border:1px solid #273244; background:#121a24; color:#e9eef5; }
+button { padding:10px 12px; border-radius:10px; border:1px solid #273244; background:#182233; color:#e9eef5; cursor:pointer; }
+button:disabled { opacity:0.5; cursor:not-allowed; }
+.grid { display:grid; grid-template-columns: 1fr 1fr 1fr; gap:12px; margin-top:14px; }
+.panel { background:#121a24; border:1px solid #273244; border-radius:16px; padding:12px; min-height: 300px; }
+.card { display:inline-flex; align-items:center; justify-content:center; width:48px; height:64px; border-radius:12px; border:1px solid #273244; background:#0f1621; margin:6px; user-select:none; }
+.card.sel { outline:2px solid #7aa2ff; }
+.small { font-size:12px; opacity:0.85; }
+#log { max-height: 220px; overflow:auto; font-size: 12px; opacity:0.9; }
+.actions { display:flex; gap:8px; flex-wrap:wrap; margin-top:10px; }
+.hint { margin-top:10px; font-size:12px; opacity:0.85; }
+#status { margin-top:10px; font-weight:600; }
+#error { margin-top:10px; color:#ff7a7a; }
+.meld { padding:10px; margin:10px 0; border:1px dashed #273244; border-radius:14px; }
+.meldTitle { font-size:12px; opacity:0.9; margin-bottom:6px; }

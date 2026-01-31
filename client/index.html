@@ -1,0 +1,57 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="utf-8" />
+  <title>Dhumbal Online</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="wrap">
+    <h1>Dhumbal Online</h1>
+
+    <div class="row">
+      <input id="name" placeholder="Your name" />
+      <button id="create">Create Room</button>
+      <input id="room" placeholder="Room Code" />
+      <button id="join">Join</button>
+      <button id="start">Start Game</button>
+    </div>
+
+    <div id="status"></div>
+    <div id="error"></div>
+
+    <div class="grid">
+      <div class="panel">
+        <h2>Players</h2>
+        <div id="players"></div>
+        <h2>Log</h2>
+        <div id="log"></div>
+      </div>
+
+      <div class="panel">
+        <h2>Floor</h2>
+        <div id="floor"></div>
+        <div class="hint">
+          Floor rule: you can grab any floor card <b>except Joker</b>. To grab, select 1 card from your hand (the “payment”), then click a floor card.
+        </div>
+      </div>
+
+      <div class="panel">
+        <h2>Your Hand</h2>
+        <div id="hand"></div>
+        <div class="actions">
+          <button id="drop">Drop Selected</button>
+          <button id="draw">Draw 1</button>
+          <button id="show">Show</button>
+        </div>
+        <div class="hint">
+          Rule enforced: you can only draw when you have <b>no valid melds</b> left in your hand (drop as many as you can, then draw one).
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <script src="https://cdn.socket.io/4.7.5/socket.io.min.js"></script>
+  <script src="client.js"></script>
+</body>
+</html>
